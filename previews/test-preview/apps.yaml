@@ -1,0 +1,22 @@
+namespace: preview-test-preview
+services:
+  - name: backend-1
+    image_tag: "latest"
+  - name: backend-2
+    image_tag: "latest"
+  - name: front
+    image_tag: "latest"
+infra:
+  - name: postgres
+    chart: postgresql
+    repoURL: https://charts.bitnami.com/bitnami
+    targetRevision: "*"
+    values:
+      auth:
+        postgresPassword: postgres
+        username: backend1
+        password: backend1
+        database: backend1
+      primary:
+        persistence:
+          enabled: false
