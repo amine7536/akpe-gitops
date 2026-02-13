@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/amine7536/akpe-gitops.git
     targetRevision: main
-    path: apps
+    path: production
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
