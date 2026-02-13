@@ -1,11 +1,11 @@
 namespace: preview-test-preview
 services:
   - name: backend-1
-    image_tag: "latest"
+    image_tag: "f1aa72931d95060850337e7d8cfe2c545232c55d"
   - name: backend-2
-    image_tag: "latest"
+    image_tag: "18d4fb104290cea78a54a307038c2bb7e30fe585"
   - name: front
-    image_tag: "latest"
+    image_tag: "ec80d66c336c87c958073fe2717c2c40a6fe4272"
 infra:
   - name: postgres
     chart: postgresql
