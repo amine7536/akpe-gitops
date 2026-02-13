@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: backend-2
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/amine7536/akpe-backend-2.git
+    targetRevision: main
+    path: k8s
+    helm:
+      parameters:
+        - name: image.tag
+          value: "79bfefd902b415dbba2858a7659f35e43a50e201"
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
