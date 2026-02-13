@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: test-preview
+  namespace: argocd
+spec:
+  description: "Preview environment: test-preview"
+  sourceRepos:
+    - "https://github.com/amine7536/akpe-*"
+    - "https://charts.bitnami.com/bitnami"
+  destinations:
+    - namespace: preview-test-preview
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist: []

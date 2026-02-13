@@ -1,0 +1,8 @@
+namespace: preview-test-preview
+services:
+  - name: backend-1
+    image_tag: "6dcc7ef80a2f53faea66c739cf36af926d8bbd41"
+  - name: backend-2
+    image_tag: "79bfefd902b415dbba2858a7659f35e43a50e201"
+  - name: front
+    image_tag: "435d3b7a32d8294968fb61951762ca25558f2883"
