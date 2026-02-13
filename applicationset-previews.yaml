@@ -1,0 +1,35 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: preview-environments
+  namespace: argocd
+spec:
+  goTemplate: true
+  goTemplateOptions: ["missingkey=error"]
+  generators:
+    - git:
+        repoURL: https://github.com/amine7536/akpe-gitops.git
+        revision: HEAD
+        directories:
+          - path: "previews/*"
+  template:
+    metadata:
+      name: "preview-{{ .path.basename }}"
+      labels:
+        app.kubernetes.io/part-of: preview-environments
+    spec:
+      project: previews
+      source:
+        repoURL: https://github.com/amine7536/akpe-gitops.git
+        targetRevision: HEAD
+        path: "{{ .path.path }}"
+        plugin: {}
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: argocd
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=false
