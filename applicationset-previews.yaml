@@ -18,12 +18,13 @@ spec:
       labels:
         app.kubernetes.io/part-of: preview-environments
     spec:
-      project: default
+      project: previews
       source:
         repoURL: https://github.com/amine7536/akpe-gitops.git
         targetRevision: HEAD
         path: "{{ .path.path }}"
-        plugin: {}
+        plugin:
+          name: preview-generator
       destination:
         server: https://kubernetes.default.svc
         namespace: argocd
