@@ -1,0 +1,29 @@
+{{- range .Values.services }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ $.Release.Name }}-{{ .name }}
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: {{ $.Release.Name }}
+  source:
+    repoURL: "https://github.com/amine7536/akpe-{{ .name }}.git"
+    targetRevision: {{ if .image_tag }}{{ .image_tag }}{{ else }}main{{ end }}
+    path: k8s/
+    helm:
+      parameters:
+        - name: image.tag
+          value: {{ if .image_tag }}{{ .image_tag | quote }}{{ else }}"$ARGOCD_APP_REVISION"{{ end }}
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: {{ $.Release.Name }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+---
+{{- end }}

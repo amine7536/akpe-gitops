@@ -14,17 +14,22 @@ spec:
           - path: "previews/*"
   template:
     metadata:
-      name: "preview-{{ .path.basename }}"
+      name: "{{ .path.basename }}"
       labels:
         app.kubernetes.io/part-of: preview-environments
     spec:
       project: previews
-      source:
-        repoURL: https://github.com/amine7536/akpe-gitops.git
-        targetRevision: HEAD
-        path: "{{ .path.path }}"
-        plugin:
-          name: preview-generator
+      sources:
+        - repoURL: https://github.com/amine7536/akpe-gitops.git
+          targetRevision: HEAD
+          ref: values
+        - repoURL: https://github.com/amine7536/akpe-gitops.git
+          targetRevision: HEAD
+          path: preview-chart
+          helm:
+            releaseName: "{{ .path.basename }}"
+            valueFiles:
+              - "$values/{{ .path.path }}/values.yaml"
       destination:
         server: https://kubernetes.default.svc
         namespace: argocd
