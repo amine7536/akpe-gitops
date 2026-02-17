@@ -4,5 +4,5 @@ services:
       - name: database.name
         value: "backend-1-test-preview-env-e2e"
   - name: backend-2
-    image_tag: "e15346e4819f8d04dda65d18e19ffe306b575bea"
+    image_tag: "ff30409f014b36abbb4f4e9f246c3d70b1b81d7b"
   - name: front
