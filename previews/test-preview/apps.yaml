@@ -7,4 +7,4 @@ services:
   - name: backend-2
     image_tag: "18d4fb104290cea78a54a307038c2bb7e30fe585"
   - name: front
-    image_tag: "ec80d66c336c87c958073fe2717c2c40a6fe4272"
+    image_tag: "55151829d08af723d9049e705df285e32ae5c107"
