@@ -12,7 +12,7 @@ spec:
     helm:
       parameters:
         - name: image.tag
-          value: "964c372fbcbcd778247c90bcbb57a15c6a52d301"
+          value: "720db837386a87d489e980cf38e26dd5b5b6528d"
   destination:
     server: https://kubernetes.default.svc
     namespace: main
