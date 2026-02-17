@@ -1,7 +1,9 @@
-namespace: preview-test-preview
 services:
   - name: backend-1
     image_tag: "0bfc446f3ba911c01e1dd59ebfbedda9f2b80d6e"
+    helm_params:
+      - name: database.name
+        value: "backend-1-test-preview"
   - name: backend-2
     image_tag: "18d4fb104290cea78a54a307038c2bb7e30fe585"
   - name: front
