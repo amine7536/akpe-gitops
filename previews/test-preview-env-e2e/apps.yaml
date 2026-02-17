@@ -1,0 +1,8 @@
+services:
+  - name: backend-1
+    helm_params:
+      - name: database.name
+        value: "backend-1-test-preview-env-e2e"
+  - name: backend-2
+    image_tag: "4c7a41e325b6f8578e720a02b78f44cd96728aef"
+  - name: front
