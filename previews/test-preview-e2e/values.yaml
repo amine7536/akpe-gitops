@@ -1,7 +1,0 @@
-services:
-- name: backend-1
-  commitSha: 9fcebacd4e89a3c3d924f428065d01c29fb481f4
-- name: backend-2
-  commitSha: 940cc2cb8f5c46c611f91ae2648bff6494b885df
-- name: front
-  commitSha: 0956bbb5c82c9f48ea12c472adac6d27f545d8e2

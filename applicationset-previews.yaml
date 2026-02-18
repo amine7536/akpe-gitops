@@ -23,9 +23,9 @@ spec:
         - repoURL: https://github.com/amine7536/akpe-gitops.git
           targetRevision: HEAD
           ref: values
-        - chart: akpe-preview
-          repoURL: oci://ghcr.io/amine7536/akpe-charts
+        - repoURL: oci://ghcr.io/amine7536/akpe-charts/akpe-preview
           targetRevision: 0.1.0
+          path: "."
           helm:
             releaseName: "{{ .path.basename }}"
             valueFiles:
