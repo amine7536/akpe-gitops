@@ -1,14 +1,14 @@
 services:
 - name: backend-1
-  commitSha: 1d5fc0a8df3358c7e6a70c7a8c89cea8d8ad7557
+  commitSha: 50716bd0f058c4f50602e430ecfffbe893110a89
   metadata:
     pr-author: amine7536
     pr-url: https://github.com/amine7536/akpe-backend-1/pull/3
     pr-number: '3'
     created-at: '2026-02-18T12:11:22Z'
-    updated-at: '2026-02-18T18:58:28Z'
+    updated-at: '2026-02-18T19:23:42Z'
     vcs.ref.name: test/preview-e2e
-    cicd.pipeline.run.url: https://github.com/amine7536/akpe-backend-1/actions/runs/22153437206
+    cicd.pipeline.run.url: https://github.com/amine7536/akpe-backend-1/actions/runs/22154287949
 - name: backend-2
   commitSha: a32cf8c3e9a4bd851e0eb73ed69aad90188e6a8c
   metadata:
