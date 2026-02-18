@@ -1,13 +1,13 @@
 services:
 - name: backend-1
 - name: backend-2
-  image_tag: 0d1f278b4ebf81f866e22b8bb401042f38a3fb71
+  image_tag: 3bae45ef9aa6c3a417ef886236b88026c34fe796
   metadata:
     pr-author: amine7536
     pr-url: https://github.com/amine7536/akpe-backend-2/pull/2
     pr-number: '2'
     created-at: '2026-02-18T09:58:21Z'
-    updated-at: '2026-02-18T09:58:21Z'
+    updated-at: '2026-02-18T10:09:34Z'
     branch: test/e2e-preview-values
-    workflow-run-url: https://github.com/amine7536/akpe-backend-2/actions/runs/22135010480
+    workflow-run-url: https://github.com/amine7536/akpe-backend-2/actions/runs/22135374279
 - name: front
