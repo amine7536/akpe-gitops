@@ -1,6 +1,0 @@
-services:
-- name: backend-1
-  image_tag: 6cb88683e36719bfed1e5167787e7af486fdab7e
-- name: backend-2
-  image_tag: ff30409f014b36abbb4f4e9f246c3d70b1b81d7b
-- name: front
