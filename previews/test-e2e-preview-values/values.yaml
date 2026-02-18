@@ -8,6 +8,6 @@ services:
     pr-number: '2'
     created-at: '2026-02-18T09:58:21Z'
     updated-at: '2026-02-18T10:09:34Z'
-    branch: test/e2e-preview-values
-    workflow-run-url: https://github.com/amine7536/akpe-backend-2/actions/runs/22135374279
+    vcs.ref.name: test/e2e-preview-values
+    cicd.pipeline.run.url: https://github.com/amine7536/akpe-backend-2/actions/runs/22135374279
 - name: front

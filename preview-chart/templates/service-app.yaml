@@ -11,15 +11,15 @@ metadata:
     app.kubernetes.io/managed-by: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "0"
-    preview.akpe.io/commit-sha: {{ .commitSha | default "" | quote }}
+    preview.akpe.io/vcs.ref.revision: {{ .commitSha | default "" | quote }}
     {{- if .metadata }}
     preview.akpe.io/pr-author: {{ index .metadata "pr-author" | quote }}
     preview.akpe.io/pr-url: {{ index .metadata "pr-url" | quote }}
     preview.akpe.io/pr-number: {{ index .metadata "pr-number" | quote }}
     preview.akpe.io/created-at: {{ index .metadata "created-at" | quote }}
     preview.akpe.io/updated-at: {{ index .metadata "updated-at" | quote }}
-    preview.akpe.io/branch: {{ index .metadata "branch" | quote }}
-    preview.akpe.io/workflow-run-url: {{ index .metadata "workflow-run-url" | quote }}
+    preview.akpe.io/vcs.ref.name: {{ index .metadata "vcs.ref.name" | quote }}
+    preview.akpe.io/cicd.pipeline.run.url: {{ index .metadata "cicd.pipeline.run.url" | quote }}
     {{- end }}
   finalizers:
     - resources-finalizer.argocd.argoproj.io

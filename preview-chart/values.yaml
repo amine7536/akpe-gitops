@@ -10,8 +10,8 @@
 #       pr-number: "42"
 #       created-at: "2026-02-18T14:30:00Z"
 #       updated-at: "2026-02-18T16:00:00Z"
-#       branch: "feature/add-pricing"
-#       workflow-run-url: "https://github.com/amine7536/akpe-backend-1/actions/runs/12345"
+#       vcs.ref.name: "feature/add-pricing"
+#       cicd.pipeline.run.url: "https://github.com/amine7536/akpe-backend-1/actions/runs/12345"
 #   - name: backend-2              # no commitSha → tracks main, no metadata
 #   - name: front
 
