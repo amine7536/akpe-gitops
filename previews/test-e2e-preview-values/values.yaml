@@ -1,0 +1,5 @@
+services:
+- name: backend-1
+- name: backend-2
+  image_tag: 1aeec34a4779a18f5a88590128eae31761942514
+- name: front
