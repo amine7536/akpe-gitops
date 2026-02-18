@@ -4,8 +4,22 @@ kind: Application
 metadata:
   name: {{ $.Release.Name }}-{{ .name }}
   namespace: argocd
+  labels:
+    app.kubernetes.io/name: {{ .name }}
+    app.kubernetes.io/instance: {{ $.Release.Name }}
+    app.kubernetes.io/part-of: preview-environments
+    app.kubernetes.io/managed-by: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "0"
+    {{- if .metadata }}
+    preview.akpe.io/pr-author: {{ index .metadata "pr-author" | quote }}
+    preview.akpe.io/pr-url: {{ index .metadata "pr-url" | quote }}
+    preview.akpe.io/pr-number: {{ index .metadata "pr-number" | quote }}
+    preview.akpe.io/created-at: {{ index .metadata "created-at" | quote }}
+    preview.akpe.io/updated-at: {{ index .metadata "updated-at" | quote }}
+    preview.akpe.io/branch: {{ index .metadata "branch" | quote }}
+    preview.akpe.io/workflow-run-url: {{ index .metadata "workflow-run-url" | quote }}
+    {{- end }}
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
