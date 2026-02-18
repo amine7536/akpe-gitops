@@ -16,7 +16,7 @@ spec:
         releaseName: front
         parameters:
           - name: image.tag
-            value: "720db837386a87d489e980cf38e26dd5b5b6528d"
+            value: "3f102ee557c1bbf5bfadce72787f666c1a5655c4"
         valueFiles:
           - "$svcvalues/k8s/values.yaml"
   destination:
