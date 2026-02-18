@@ -15,8 +15,9 @@ metadata:
 spec:
   description: "Preview environment: {{ .Release.Name }}"
   sourceRepos:
-    - "https://github.com/amine7536/akpe-*"
-    - "https://charts.bitnami.com/bitnami"
+    {{- range $.Values.serviceRepos }}
+    - {{ . | quote }}
+    {{- end }}
   destinations:
     - namespace: {{ .Release.Name }}
       server: https://kubernetes.default.svc

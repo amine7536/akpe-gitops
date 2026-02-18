@@ -20,15 +20,16 @@ spec:
     spec:
       project: previews
       sources:
-        - repoURL: https://github.com/amine7536/akpe-gitops.git
+        - repoURL: "{{ .repoURL }}"
           targetRevision: HEAD
           ref: values
-        - repoURL: https://github.com/amine7536/akpe-gitops.git
+        - repoURL: "{{ .repoURL }}"
           targetRevision: HEAD
           path: preview-chart
           helm:
             releaseName: "{{ .path.basename }}"
             valueFiles:
+              - "$values/services.yaml"
               - "$values/{{ .path.path }}/values.yaml"
       destination:
         server: https://kubernetes.default.svc
