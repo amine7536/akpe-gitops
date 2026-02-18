@@ -5,14 +5,20 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: https://github.com/amine7536/akpe-front.git
-    targetRevision: main
-    path: k8s
-    helm:
-      parameters:
-        - name: image.tag
-          value: "720db837386a87d489e980cf38e26dd5b5b6528d"
+  sources:
+    - repoURL: https://github.com/amine7536/akpe-front.git
+      targetRevision: main
+      ref: svcvalues
+    - chart: akpe-service
+      repoURL: oci://ghcr.io/amine7536/akpe-charts
+      targetRevision: 0.1.0
+      helm:
+        releaseName: front
+        parameters:
+          - name: image.tag
+            value: "720db837386a87d489e980cf38e26dd5b5b6528d"
+        valueFiles:
+          - "$svcvalues/k8s/values.yaml"
   destination:
     server: https://kubernetes.default.svc
     namespace: main
