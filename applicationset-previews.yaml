@@ -20,10 +20,10 @@ spec:
     spec:
       project: previews
       sources:
-        - repoURL: "{{ .repoURL }}"
+        - repoURL: https://github.com/amine7536/akpe-gitops.git
           targetRevision: HEAD
           ref: values
-        - repoURL: "{{ .repoURL }}"
+        - repoURL: https://github.com/amine7536/akpe-gitops.git
           targetRevision: HEAD
           path: preview-chart
           helm:
