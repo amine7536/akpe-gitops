@@ -1,0 +1,13 @@
+services:
+  - name: backend-1
+  - name: backend-2
+  - name: front
+    commitSha: 1d72ddc0fbd0366e9ab87d8bf0ce84931495d64d
+    metadata:
+      pr-author: amine7536
+      pr-url: https://github.com/amine7536/akpe-front/pull/2
+      pr-number: '2'
+      created-at: '2026-02-20T19:05:32Z'
+      updated-at: '2026-02-20T19:05:32Z'
+      vcs.ref.name: test/preview-feedback
+      cicd.pipeline.run.url: https://github.com/amine7536/akpe-front/actions/runs/22237357204
