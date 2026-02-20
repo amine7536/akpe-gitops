@@ -20,12 +20,12 @@ services:
       vcs.ref.name: test/preview-feedback
       cicd.pipeline.run.url: https://github.com/amine7536/akpe-backend-2/actions/runs/22236573763
   - name: front
-    commitSha: 549ef3bbbddc2d135340f8b8661dfcbebe90b30a
+    commitSha: 718c557ed51032c15af4cc45e71c35f287c8a53c
     metadata:
       pr-author: amine7536
       pr-url: https://github.com/amine7536/akpe-front/pull/2
       pr-number: '2'
       created-at: '2026-02-20T18:16:41Z'
-      updated-at: '2026-02-20T18:38:47Z'
+      updated-at: '2026-02-20T18:40:58Z'
       vcs.ref.name: test/preview-feedback
-      cicd.pipeline.run.url: https://github.com/amine7536/akpe-front/actions/runs/22236486593
+      cicd.pipeline.run.url: https://github.com/amine7536/akpe-front/actions/runs/22236559635
