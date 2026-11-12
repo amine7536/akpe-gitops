@@ -1,0 +1,17 @@
+services:
+  - name: backend-1
+    commitSha: bafb8e070e8411192edc183e0951a5b14d594bb4
+    host: backend-1-feature-items-count.127.0.0.1.nip.io
+    metadata:
+      pr-author: amine7536
+      pr-url: https://github.com/badilhq/demo-backend-1/pull/30
+      pr-number: "30"
+      created-at: "2026-11-12T19:02:00Z"
+      updated-at: "2026-11-12T19:02:00Z"
+      vcs.ref.name: feature/items-count
+      cicd.pipeline.run.url: ""
+  - name: backend-2
+    host: backend-2-feature-items-count.127.0.0.1.nip.io
+  - name: front
+    host: front-feature-items-count.127.0.0.1.nip.io
+  - name: postgres
